@@ -1,6 +1,5 @@
-export const APP_ID = ''
+export const APP_ID = '8797638c21bc4c1886a74228ffa5c16e'
 export const SHARE_ID = 2
-export const RTMP_URL = ''
 
 export const voiceReverbList = [
   {
@@ -40,31 +39,31 @@ export const voiceReverbList = [
 export const voiceChangerList = [
   {
     value: 0,
-    label: "VOICE_CHANGER_OFF"
+    label: "VOICE_CHANGER_OFF"  // 原声，即关闭本地语音变声
   },
   {
     value: 1,
-    label: "VOICE_CHANGER_OLDMAN"
+    label: "VOICE_CHANGER_OLDMAN"  // 老男孩
   },
   {
     value: 2,
-    label: "VOICE_CHANGER_BABYBOY"
+    label: "VOICE_CHANGER_BABYBOY" // 小男孩
   },
   {
     value: 3,
-    label: "VOICE_CHANGER_BABYGIRL"
+    label: "VOICE_CHANGER_BABYGIRL"  // 小女孩
   },
   {
     value: 4,
-    label: "VOICE_CHANGER_ZHUBAJIE"
+    label: "VOICE_CHANGER_ZHUBAJIE"  // 猪八戒
   },
   {
     value: 5,
-    label: "VOICE_CHANGER_ETHEREAL"
+    label: "VOICE_CHANGER_ETHEREAL"   // 空灵
   },
   {
     value: 6,
-    label: "VOICE_CHANGER_HULK"
+    label: "VOICE_CHANGER_HULK" // 绿巨人
   }
 ]
 

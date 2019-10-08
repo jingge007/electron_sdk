@@ -15,12 +15,13 @@
     "immutable": "^3.8.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "source-map-support": "^0.5.9"
+    "source-map-support": "^0.5.9",
+    "sweetalert2": "^8.17.6"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "electron": "5.0.8",
+    "electron": "^5.0.8",
     "electron-builder": "^20.44.4",
     "electron-webpack": "^2.7.4",
     "webpack": "^4.39.2"
@@ -35,6 +36,10 @@
   },
   "agora_electron": {
     "prebuilt": true,
-    "electron_version": "5.0.8"
+    "electron_version": "5.0.8",
+    "platform": "win32",
+    "msvs_version": "2017",
+    "debug": false,
+    "silent": false
   }
 }

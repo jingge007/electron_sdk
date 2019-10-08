@@ -2,5 +2,6 @@
 dist/
 node_modules/
 thumbs.db
+.idea/
 
 local_settings.js

@@ -1,59 +1,48 @@
-# Agora Electron Quickstart
+# Agora Electron (基于声网electron sdk 和react构建示例应用程序)
 
-This tutorial describes how to create an Agora account and build a sample app with Agora using [Electron](https://electronjs.org/) and [React](https://github.com/facebook/react).
 
-## Prerequisites
-- Agora.io [Developer Account](https://dashboard.agora.io/signin/)
+## 环境要求
+- 在 [Agora.io](https://dashboard.agora.io/signin/)创建一个开发人员帐户。完成注册过程后，您将被重定向到仪表板，在左侧的仪表板树中导航至“ 项目” >“ 项目列表”，从仪表板获取的应用程序ID复制到文本文件中。启动应用程序时将使用它。
 - [Node.js](https://nodejs.org/en/download/) 6.9.1+ with C++11 support
 - [Electron](https://electronjs.org) >= 1.8.3
 
-## Quick Start
-This section shows you how to prepare and build the Agora Electron wrapper.
+## 快速开始
+打开 [settings.js](src/utils/settings.js) 文件并添加应用程序App_ID.
 
-### Create an Account and Obtain an App ID
-To build and run the sample application, first obtain an app ID: 
+注：如果懒得注册开发者账号获取APP ID，可以使用我的APP_ID：8797638c21bc4c1886a74228ffa5c16e
 
-1. Create a developer account at [agora.io](https://dashboard.agora.io/signin/). Once you finish the sign-up process, you are redirected to the dashboard.
-2. Navigate in the dashboard tree on the left to **Projects** > **Project List**.
-3. Copy the app ID that you obtain from the dashboard into a text file. You will use this when you launch the app.
-
-### Update and Run the Sample Application
-
-Open the [settings.js](src/utils/settings.js) file and add the app ID.
-
-Run the `install` command in your project directory:
+**注意:** npm install 安装依赖项其中electron会默认安装64位的，但是声网的electron sdk 只支持32位的electron
+，所以在npm install 安装依赖前在package.json文件中先删掉 "electron": "^5.0.8"，等npm install 安装完依赖项
+在单独安装32位的electron （ npm install -D --arch=ia32 electron@5.0.8 ）
 
 ```bash  
-  # install dependencies
+  # 安装依赖项
   npm install 
 ```
 
-**Note:** During install, the C++ add-on is downloaded instead of being built.
-
-
-Use the `run dev` or `run dist` command to build the Agora Electron wrapper.
-To enable dynamic compiling and HMR development, use `run dev`:
+安装完依赖包可以远行 npm run dev 命令启动和运行项目查看效果
 	
 ```bash
-# enable dynamic compiling and HMR developing environment
+# 启动编译开发环境
 npm run dev
 ```
 
-To build for release, use `run dist`:
+要打包项目发布版本可以执行命令：npm run dist (但是当前声网提供的打包配置有些问题，打包成功后运行应用程序都是空白的)
 
 ```bash
-# build for release
+# 打包
 npm run dist
 ```
 
-Once the build is complete, use the resulting Agora Electron wrapper to build your application.
 
-## Resources
-* [Documention](https://docs.agora.io/en/Video/API%20Reference/electron/index.html)
-* [File bugs about this sample](https://github.com/AgoraIO-Community/Agora-Electron-Quickstart/issues)
-* Full Electron SDK wrapper addon source can be found at [Agora RTC SDK for Electron](https://github.com/AgoraIO-Community/Agora-RTC-SDK-for-Electron)
-* General information about building apps with [React](https://github.com/facebook/react) and the [Electron Webpack](https://github.com/electron-userland/electron-webpack)
+## 当前存在问题
+1. 当前的demo是基于声网的electron-sdk 配置好的环境中开发的，当前的配置的开发环境中会存在打包后运行应用程序时都是空白，已经跟声网那边的相关人员反馈情况，他们正在处理排查问题中。
 
+2. 如果是使用create-react-app 构建项目搭配electron时，根据electron-sdk的demo相关的要求安装完依赖后，执行 npm start 启动项目时会报以下的错误。
+![ad](https://raw.githubusercontent.com/jingge007/images/master/1570522317.png)
+现在还没有找到这个报错的原因，咨询声网那边的负责人后，他们给出了一个[参考指南](https://github.com/AgoraIO-Community/Agora-Electron-Quickstart/wiki/%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B)但是好像也是没有解决这个报错问题。（有兴趣的小伙伴可以研究一下）
 
-## License
-This software is under the MIT License (MIT). [View the license](LICENSE.md).
+## 相关资料与文档
+1. 声网的electron-sdk 的demo地址：https://github.com/AgoraIO-Community/Agora-Electron-Quickstart
+2. 声网electron-sdk 的相关资料地址：https://github.com/AgoraIO/Electron-SDK/blob/dev/2.9.0/README.zh.md
+3. 声网开发者中心（electron）的文档地址：https://docs.agora.io/cn/Interactive%20Broadcast/API%20Reference/electron/index.html
