@@ -1,9 +1,8 @@
-# Agora Electron (基于声网electron sdk 和react构建示例应用程序)
-
+# 基于声网electron sdk和react构建示例应用程序
 
 ## 环境要求
 - 在 [Agora.io](https://dashboard.agora.io/signin/)创建一个开发人员帐户。完成注册过程后，您将被重定向到仪表板，在左侧的仪表板树中导航至“ 项目” >“ 项目列表”，从仪表板获取的应用程序ID复制到文本文件中。启动应用程序时将使用它。
-- [Node.js](https://nodejs.org/en/download/) 6.9.1+ with C++11 support
+- [Node.js](https://nodejs.org/en/download/) 6.9.1
 - [Electron](https://electronjs.org) >= 1.8.3
 
 ## 快速开始
@@ -45,4 +44,4 @@ npm run dist
 ## 相关资料与文档
 1. 声网的electron-sdk 的demo地址：https://github.com/AgoraIO-Community/Agora-Electron-Quickstart
 2. 声网electron-sdk 的相关资料地址：https://github.com/AgoraIO/Electron-SDK/blob/dev/2.9.0/README.zh.md
-3. 声网开发者中心（electron）的文档地址：https://docs.agora.io/cn/Interactive%20Broadcast/API%20Reference/electron/index.html
+3. 声网开发者中心(electron)的文档地址：https://docs.agora.io/cn/Interactive%20Broadcast/API%20Reference/electron/index.html
